@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace PingPing.Scripts.ScriptableObjectsBase
 {
+    [System.Serializable]
     public struct PlatformSpawnIntervals
     {
         public float minTime;
@@ -14,10 +15,10 @@ namespace PingPing.Scripts.ScriptableObjectsBase
     public class SO_GameResources : ScriptableObject
     {
         [field: SerializeField, Header("Game time settings"), Tooltip("Reference to the spawn rate time")]
-        public PlatformSpawnIntervals SpawnRate { get; private set; }
+        public PlatformSpawnIntervals SpawnRate { get; private set; } = new PlatformSpawnIntervals();
 
 
-        [field: SerializeField, Tooltip("When to start the game")]
+        [field: SerializeField, Space(5), Tooltip("When to start the game")]
         public float StartTimer { get; private set; }
 
 

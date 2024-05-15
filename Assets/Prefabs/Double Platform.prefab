@@ -66,7 +66,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -93,7 +93,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.021491, y: 3.0164495}
+  m_Size: {x: 2.021491, y: 3.016449}
   m_EdgeRadius: 0
 --- !u!1001 &2093299613518978172
 PrefabInstance:
@@ -121,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4083143277671500363, guid: 99674aeba2b115c94973bf4facd6259a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083143277671500363, guid: 99674aeba2b115c94973bf4facd6259a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4083143277671500363, guid: 99674aeba2b115c94973bf4facd6259a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083143277671500363, guid: 99674aeba2b115c94973bf4facd6259a, type: 3}
       propertyPath: m_LocalRotation.w

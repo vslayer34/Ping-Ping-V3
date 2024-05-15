@@ -29,6 +29,7 @@ namespace PingPing.Scripts.Level
         }
 
         // Memeber methods-------------------------------------------------------------------------
+        
         /// <summary>
         /// Set the level bounds dynamically according to the device size
         /// </summary>

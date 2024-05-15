@@ -12,15 +12,13 @@ namespace PingPing.Scripts.Platforms
     public class PlatformController : MonoBehaviour
     {
         // Temporary removed as I may not need it
-        /*
+        
         [SerializeField, Tooltip("horizantal speed")]
         private float _horizontalSpeed = 1.0f;
 
         [SerializeField, Tooltip("the platform vertical speed")]
         private float _verticalSpeed;
-        */
-
-        [SerializeField, Tooltip("speed of the platform")]
+        
         private float _speed;
 
         private BoxCollider2D _collider;
@@ -28,6 +26,8 @@ namespace PingPing.Scripts.Platforms
         private bool _isDragged;
         private int _fingerIndex;
         private Vector2 _movementDirection = Vector2.left;
+
+        private Vector3 _touchWorldPosition;
 
 
 
@@ -52,10 +52,14 @@ namespace PingPing.Scripts.Platforms
             Touch.onFingerUp -= HandleReleaseMotion;
         }
 
+        private void Start()
+        {
+            _speed = _horizontalSpeed;
+        }
+
         private void Update()
         {
-            MoveHorizontaly();
-            DetectTouch();
+            Move();
         }
 
         // Member Methods--------------------------------------------------------------------------
@@ -63,10 +67,9 @@ namespace PingPing.Scripts.Platforms
         /// <summary>
         /// Move the platform to the left of the screen
         /// </summary>
-        private void MoveHorizontaly()
+        private void Move()
         {
             transform.Translate(_speed * Time.deltaTime * _movementDirection);
-            // transform.Translate(_movementDirection * _horizontalSpeed * Time.deltaTime);
         }
 
         /// <summary>
@@ -74,14 +77,15 @@ namespace PingPing.Scripts.Platforms
         /// and according to the delta move upwards or downwards
         /// </summary>
         /// <param name="direction"></param>
-        private void MoveVertically(Vector2 direction)
+        private void MoveVertically()
         {
-            Debug.Log(direction.y - transform.position.y);
+            if (_isDragged)
+            {
+                _movementDirection = Vector2.left + (_touchWorldPosition.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
+                _movementDirection = _movementDirection.normalized;
 
-            _movementDirection = Vector2.left + (direction.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
-            _movementDirection = _movementDirection.normalized;
-
-            transform.Translate(_speed * Time.deltaTime * _movementDirection);
+                _speed = _verticalSpeed + _horizontalSpeed;
+            }
         }
 
         private void DetectTouch()
@@ -101,7 +105,6 @@ namespace PingPing.Scripts.Platforms
 
             if (_collider == Physics2D.OverlapPoint(worldPosition))
             {
-                Debug.Log($"Over lapped!!");
                 _isDragged = true;
                 _fingerIndex = finger.index;
             }
@@ -117,10 +120,10 @@ namespace PingPing.Scripts.Platforms
                 return;
             }
 
-            var worldPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
-            worldPosition.z = 0.0f;
+            _touchWorldPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
+            _touchWorldPosition.z = 0.0f;
 
-            MoveVertically(worldPosition);
+            MoveVertically();
         }
 
          /// <summary>
@@ -132,7 +135,9 @@ namespace PingPing.Scripts.Platforms
             if (_isDragged)
             {
                 _isDragged = false;
+                _touchWorldPosition = Vector3.zero;
                 _movementDirection = Vector2.left;
+                _speed = _horizontalSpeed;
             }
         }        
     }

@@ -11,6 +11,7 @@ namespace PingPing.Scripts.Ball
 
 
         // Game Loop Methods-----------------------------------------------------------------------
+        
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();

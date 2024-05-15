@@ -32,6 +32,7 @@ namespace PingPing.Scripts.Platforms
 
 
         // Game Loop Methods-----------------------------------------------------------------------
+        
         private void OnEnable()
         {
             EnhancedTouchSupport.Enable();

@@ -6,6 +6,9 @@ namespace PingPing.Scripts.Platforms
 {
     public class ShootBall : MonoBehaviour
     {
+        [field: SerializeField, Tooltip("Reference to the ball holder area")]
+        public Transform BallHolderArea { get; private set; }
+
         
     }
 }

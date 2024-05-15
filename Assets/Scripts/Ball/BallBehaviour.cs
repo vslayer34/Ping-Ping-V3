@@ -20,7 +20,8 @@ namespace PingPing.Scripts.Ball
 
         public void LaunchBall(float launchForce = 10.0f)
         {
-            _rb.AddForce(Vector2.right * launchForce, ForceMode2D.Impulse);
+            Vector2 launchVector = new Vector2(1, Random.Range(-1.0f, 1.0f));
+            _rb.AddForce(launchVector * launchForce, ForceMode2D.Impulse);
         }
     }
 }

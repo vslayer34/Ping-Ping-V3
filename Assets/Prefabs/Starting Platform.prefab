@@ -95,10 +95,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4083143277671500363}
-  - component: {fileID: 8084523386514108292}
-  - component: {fileID: 4282220912430432647}
-  m_Layer: 3
-  m_Name: Single Platform
+  - component: {fileID: 503842082512596816}
+  - component: {fileID: 5120917858129678615}
+  m_Layer: 0
+  m_Name: Starting Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ Transform:
   - {fileID: 9156992147278190188}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8084523386514108292
+--- !u!61 &503842082512596816
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
---- !u!114 &4282220912430432647
+--- !u!114 &5120917858129678615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

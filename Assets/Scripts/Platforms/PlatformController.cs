@@ -11,11 +11,14 @@ namespace PingPing.Scripts.Platforms
 {
     public class PlatformController : MonoBehaviour
     {
+        // Temporary removed as I may not need it
+        /*
         [SerializeField, Tooltip("horizantal speed")]
         private float _horizontalSpeed = 1.0f;
 
         [SerializeField, Tooltip("the platform vertical speed")]
         private float _verticalSpeed;
+        */
 
         [SerializeField, Tooltip("speed of the platform")]
         private float _speed;

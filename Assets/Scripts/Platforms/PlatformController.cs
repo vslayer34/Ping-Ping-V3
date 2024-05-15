@@ -103,8 +103,11 @@ namespace PingPing.Scripts.Platforms
             var worldPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
             worldPosition.z = 0.0f;
 
+            Debug.Log(worldPosition);
+
             if (_collider == Physics2D.OverlapPoint(worldPosition))
             {
+                Debug.Log("Overlaped!");
                 _isDragged = true;
                 _fingerIndex = finger.index;
             }

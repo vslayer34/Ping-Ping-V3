@@ -14,6 +14,10 @@ namespace PingPing.Scripts.Platforms
         public BallBehaviour Ball { get; private set; }
 
 
+        [SerializeField, Tooltip("The force to launch the ball")]
+        private float _launchForce = 20.0f;
+
+
 
         // Game Loop Methods-----------------------------------------------------------------------
 
@@ -26,8 +30,8 @@ namespace PingPing.Scripts.Platforms
 
         private void StartGame()
         {
-            BallHolderArea.parent = null;
-            Ball.LaunchBall();
+            Ball.transform.parent = null;
+            Ball.LaunchBall(_launchForce);
         }
     }
 }

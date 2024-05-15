@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 503842082512596816}
   - component: {fileID: 5120917858129678615}
   - component: {fileID: 3551863975405891380}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Starting Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8522730393748483341}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a00ae8ff45fdeb22191305a8e63fee0a, type: 3}
   m_Name: 
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BallHolderArea>k__BackingField: {fileID: 5269984910591753008}
   <Ball>k__BackingField: {fileID: 3343088367173533598}
+  _launchForce: 20
 --- !u!1001 &563520047341573323
 PrefabInstance:
   m_ObjectHideFlags: 0

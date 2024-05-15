@@ -18,9 +18,9 @@ namespace PingPing.Scripts.Ball
 
         // Member Methods--------------------------------------------------------------------------
 
-        public void LaunchBall()
+        public void LaunchBall(float launchForce = 10.0f)
         {
-            _rb.AddForce(Vector2.right * 100, ForceMode2D.Impulse);
+            _rb.AddForce(Vector2.right * launchForce, ForceMode2D.Impulse);
         }
     }
 }

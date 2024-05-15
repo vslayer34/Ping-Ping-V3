@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.DeviceSimulation;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
@@ -16,11 +17,14 @@ namespace PingPing.Scripts.Platforms
         [SerializeField, Tooltip("the platform vertical speed")]
         private float _verticalSpeed;
 
+        [SerializeField, Tooltip("speed of the platform")]
+        private float _speed;
+
         private BoxCollider2D _collider;
 
         private bool _isDragged;
         private int _fingerIndex;
-        private Vector2 _movementDirection;
+        private Vector2 _movementDirection = Vector2.left;
 
 
 
@@ -52,17 +56,28 @@ namespace PingPing.Scripts.Platforms
 
         // Member Methods--------------------------------------------------------------------------
 
+        /// <summary>
+        /// Move the platform to the left of the screen
+        /// </summary>
         private void MoveHorizontaly()
         {
-            transform.Translate(Vector2.left * _horizontalSpeed * Time.deltaTime);
+            transform.Translate(_speed * Time.deltaTime * _movementDirection);
+            // transform.Translate(_movementDirection * _horizontalSpeed * Time.deltaTime);
         }
 
+        /// <summary>
+        /// Take the touch position and calculate the delta to the platform position
+        /// and according to the delta move upwards or downwards
+        /// </summary>
+        /// <param name="direction"></param>
         private void MoveVertically(Vector2 direction)
         {
-            var moveVector = Vector2.left + direction;
-            moveVector = moveVector.normalized;
+            Debug.Log(direction.y - transform.position.y);
 
-            transform.Translate(moveVector * _verticalSpeed * Time.deltaTime);
+            _movementDirection = Vector2.left + (direction.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
+            _movementDirection = _movementDirection.normalized;
+
+            transform.Translate(_speed * Time.deltaTime * _movementDirection);
         }
 
         private void DetectTouch()
@@ -72,6 +87,9 @@ namespace PingPing.Scripts.Platforms
 
         // Signal Methods--------------------------------------------------------------------------
 
+        /// <summary>
+        /// Get the touch position and index and set dragging status
+        /// </summary>
         private void HandleTouch(Finger finger)
         {
             var worldPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
@@ -85,6 +103,9 @@ namespace PingPing.Scripts.Platforms
             }
         }
 
+        /// <summary>
+        /// Update the touch position while its moving along the screen
+        /// </summary>
         private void HandleDragingMotion(Finger finger)
         {
             if (!_isDragged)
@@ -95,21 +116,20 @@ namespace PingPing.Scripts.Platforms
             var worldPosition = Camera.main.ScreenToWorldPoint(finger.screenPosition);
             worldPosition.z = 0.0f;
 
-            if (finger.currentTouch.delta.y > 0)
-            {
-                _movementDirection = Vector2.up;
-                MoveVertically(_movementDirection);
-            }
-            else if (finger.currentTouch.delta.y < 0)
-            {
-                _movementDirection = Vector2.down;
-                MoveVertically(_movementDirection);
-            }
+            MoveVertically(worldPosition);
         }
 
+         /// <summary>
+         /// Remove dragging status and default the platform direction
+         /// </summary>
          private void HandleReleaseMotion(Finger finger)
         {
-            
+            // if the touch was dragging the platform reset all parameters
+            if (_isDragged)
+            {
+                _isDragged = false;
+                _movementDirection = Vector2.left;
+            }
         }        
     }
 }

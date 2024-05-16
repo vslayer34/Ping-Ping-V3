@@ -24,7 +24,10 @@ namespace PingPing.Scripts.Level
 
         private void Start()
         {
-            // InvokeRepeating(nameof(SpawnNewPlatform), 3, 2);
+            InvokeRepeating(nameof(SpawnNewPlatform), 
+                _levelConfigs.StartTimer, 
+                Random.Range(_levelConfigs.SpawnRate.minTime, _levelConfigs.SpawnRate.maxTime)
+            );
 
             _levelConfigs.FillPlatformPool();
         }
@@ -33,7 +36,7 @@ namespace PingPing.Scripts.Level
 
         private void SpawnNewPlatform()
         {
-            var newPlatform = Instantiate(_doublePlatformPrefab, SpawnPoint.position, Quaternion.identity);
+            _levelConfigs.GetNewDoublePlatform();
         }
     }
 }

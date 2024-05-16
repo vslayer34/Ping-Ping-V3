@@ -14,9 +14,9 @@ namespace PingPing.Scripts.Level
         [field: SerializeField, Space(10), Tooltip("Reference to the spawn point")]
         public Transform SpawnPoint { get; private set; }
 
+        private GameObject _newDoublePlatform;
 
-        [SerializeField, Tooltip("reference to the platform prefab")]
-        private GameObject _doublePlatformPrefab;
+
 
 
 
@@ -36,7 +36,8 @@ namespace PingPing.Scripts.Level
 
         private void SpawnNewPlatform()
         {
-            _levelConfigs.GetNewDoublePlatform();
+            _newDoublePlatform = _levelConfigs.GetNewDoublePlatform();
+            _newDoublePlatform.transform.position = SpawnPoint.position;
         }
     }
 }

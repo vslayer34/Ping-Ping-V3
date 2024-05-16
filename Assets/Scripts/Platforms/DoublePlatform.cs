@@ -9,4 +9,15 @@ public class DoublePlatform : MonoBehaviour
 
     [field: SerializeField, Tooltip("Reference to the right platform")]
     public GameObject RightPlatform { get; private set; }
+
+
+
+    // Game Loop Methods---------------------------------------------------------------------------
+
+    private void OnDisable()
+    {
+        // set the disabled platform to active again
+        LeftPlatform.SetActive(true);
+        RightPlatform.SetActive(true);
+    }
 }

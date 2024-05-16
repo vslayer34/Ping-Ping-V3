@@ -212,7 +212,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.4375
+  orthographic size: 8.433674
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -868,6 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f958fba42447c23b858ec93d15c3608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelConfigs: {fileID: 11400000, guid: 017ecaf467c363aed9832384a7d77486, type: 2}
   <SpawnPoint>k__BackingField: {fileID: 1051365529}
   _doublePlatformPrefab: {fileID: 5153975986399146157, guid: d537ee33892e9493a919e45364271a86, type: 3}
 --- !u!1 &2121832288

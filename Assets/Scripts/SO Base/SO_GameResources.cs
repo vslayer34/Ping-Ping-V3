@@ -28,5 +28,27 @@ namespace PingPing.Scripts.ScriptableObjectsBase
         [field: SerializeField, Tooltip("Double platforms pool")]
         public List<GameObject> PlatformPool { get; private set; }
 
+        [field: SerializeField, Tooltip("Reference to the platform prefab")]
+        public GameObject DoublePlatformPrefab { get; private set; }
+
+
+
+        // Pool Methods----------------------------------------------------------------------------
+
+        public void FillPlatformPool()
+        {
+            Debug.Log("Called");
+            GameObject newPlatform;
+            PlatformPool = new List<GameObject>(PlatformsPoolSize);
+
+            for (int i = 0; i < PlatformsPoolSize; i++)
+            {
+                newPlatform = Instantiate(DoublePlatformPrefab, DoublePlatformPrefab.transform.position, Quaternion.identity);
+                newPlatform.SetActive(false);
+                PlatformPool.Add(newPlatform);
+
+                Debug.Log("new platform added");
+            }
+        }
     }
 }

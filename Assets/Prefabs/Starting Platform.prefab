@@ -212,7 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ae8ff45fdeb22191305a8e63fee0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _horizontalSpeed: 3
+  _verticalSpeed: 2
 --- !u!114 &3551863975405891380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BallHolderArea>k__BackingField: {fileID: 5269984910591753008}
   <Ball>k__BackingField: {fileID: 3343088367173533598}
-  _launchForce: 20
+  _launchForce: 10
 --- !u!1001 &563520047341573323
 PrefabInstance:
   m_ObjectHideFlags: 0

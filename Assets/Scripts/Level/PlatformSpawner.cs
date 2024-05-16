@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using PingPing.Scripts.ScriptableObjectsBase;
 using UnityEngine;
 
 namespace PingPing.Scripts.Level
 {
     public class PlatformSpawner : MonoBehaviour
     {
-        [field: SerializeField, Tooltip("Reference to the spawn point")]
+        [SerializeField, Tooltip("Reference to the level configs")]
+        private SO_GameResources _levelConfigs;
+
+
+        [field: SerializeField, Space(10), Tooltip("Reference to the spawn point")]
         public Transform SpawnPoint { get; private set; }
 
 
@@ -19,7 +24,9 @@ namespace PingPing.Scripts.Level
 
         private void Start()
         {
-            InvokeRepeating(nameof(SpawnNewPlatform), 3, 2);
+            // InvokeRepeating(nameof(SpawnNewPlatform), 3, 2);
+
+            _levelConfigs.FillPlatformPool();
         }
 
         // Member Methods--------------------------------------------------------------------------

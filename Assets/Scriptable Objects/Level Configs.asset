@@ -18,3 +18,4 @@ MonoBehaviour:
   <StartTimer>k__BackingField: 3
   <PlatformsPoolSize>k__BackingField: 20
   <PlatformPool>k__BackingField: []
+  <DoublePlatformPrefab>k__BackingField: {fileID: 5153975986399146157, guid: d537ee33892e9493a919e45364271a86, type: 3}

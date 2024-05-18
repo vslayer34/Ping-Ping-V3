@@ -11,6 +11,13 @@ namespace PingPing.Scripts.ScriptableObjectsBase
         public float maxTime;
     }
 
+    [System.Serializable]
+    public struct YAxisSpawnPoints
+    {
+        public float minYPosition;
+        public float maxYPosition;
+    }
+
     [CreateAssetMenu(fileName = "new level configs", menuName = "Game/Configs")]
     public class SO_GameResources : ScriptableObject
     {
@@ -18,16 +25,23 @@ namespace PingPing.Scripts.ScriptableObjectsBase
         public PlatformSpawnIntervals SpawnRate { get; private set; } = new PlatformSpawnIntervals();
 
 
-        [field: SerializeField, Space(5), Tooltip("When to start the game")]
+        [field: SerializeField, Space(1), Tooltip("When to start the game")]
         public float StartTimer { get; private set; }
+
+
+        [field : SerializeField, Tooltip("The values for y spawn points")]
+        public YAxisSpawnPoints YAxisSpawnInterval { get; private set; }
+
 
 
         [field: SerializeField, Header("Platform Pool"), Tooltip("Pool size")]
         public int PlatformsPoolSize { get; private set; }
         
+        
         [field: SerializeField, Tooltip("Double platforms pool")]
         public List<GameObject> PlatformPool { get; private set; }
 
+        
         [field: SerializeField, Tooltip("Reference to the platform prefab")]
         public GameObject DoublePlatformPrefab { get; private set; }
 

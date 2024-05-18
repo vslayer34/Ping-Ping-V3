@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6632f1d75b0fb4fb584cb84a8fd440b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelConfigs: {fileID: 11400000, guid: 017ecaf467c363aed9832384a7d77486, type: 2}
   <LeftPlatform>k__BackingField: {fileID: 7731051956437741937}
   <RightPlatform>k__BackingField: {fileID: 2776863397841564054}
 --- !u!1001 &2093299613518978172

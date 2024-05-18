@@ -39,7 +39,6 @@ namespace PingPing.Scripts.ScriptableObjectsBase
 
         public void FillPlatformPool()
         {
-            Debug.Log("Called");
             PlatformPool = new List<GameObject>(PlatformsPoolSize);
 
             for (int i = 0; i < PlatformsPoolSize; i++)
@@ -47,8 +46,6 @@ namespace PingPing.Scripts.ScriptableObjectsBase
                 _newDoublePlatform = Instantiate(DoublePlatformPrefab, DoublePlatformPrefab.transform.position, Quaternion.identity);
                 _newDoublePlatform.SetActive(false);
                 PlatformPool.Add(_newDoublePlatform);
-
-                Debug.Log("new platform added");
             }
         }
 
@@ -57,7 +54,7 @@ namespace PingPing.Scripts.ScriptableObjectsBase
         {
             for (int i = 0; i < PlatformPool.Count; i++)
             {
-                if (PlatformPool[i] != null)
+                if (PlatformPool[i] != null && !PlatformPool[i].activeInHierarchy)
                 {
                     _newDoublePlatform = PlatformPool[i];
                     

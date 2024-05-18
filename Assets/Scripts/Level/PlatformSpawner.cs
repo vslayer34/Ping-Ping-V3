@@ -15,8 +15,7 @@ namespace PingPing.Scripts.Level
         public Transform SpawnPoint { get; private set; }
 
         private GameObject _newDoublePlatform;
-
-
+        private Vector2 _randomSpawnPoint;
 
 
 
@@ -34,10 +33,19 @@ namespace PingPing.Scripts.Level
 
         // Member Methods--------------------------------------------------------------------------
 
+        /// <summary>
+        /// Get a new platform from the pool and set its spawning position
+        /// </summary>
         private void SpawnNewPlatform()
         {
             _newDoublePlatform = _levelConfigs.GetNewDoublePlatform();
-            _newDoublePlatform.transform.position = SpawnPoint.position;
+
+            _randomSpawnPoint = new Vector2(
+                SpawnPoint.position.x, 
+                Random.Range(_levelConfigs.YAxisSpawnInterval.minYPosition, _levelConfigs.YAxisSpawnInterval.maxYPosition)
+            );
+
+            _newDoublePlatform.transform.position = _randomSpawnPoint;
         }
     }
 }

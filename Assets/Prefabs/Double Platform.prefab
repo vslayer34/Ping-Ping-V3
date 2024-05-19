@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ae8ff45fdeb22191305a8e63fee0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <GameResources>k__BackingField: {fileID: 11400000, guid: 017ecaf467c363aed9832384a7d77486, type: 2}
   _horizontalSpeed: 2
   _verticalSpeed: 8
 --- !u!61 &8486191185964907392
@@ -63,11 +64,11 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 448
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 1
+  m_LayerOverridePriority: 5
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295

@@ -1,3 +1,4 @@
+using PingPing.Scripts.ScriptableObjectsBase;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -6,6 +7,10 @@ namespace PingPing.Scripts.Platforms
 {
     public class PlatformController : MonoBehaviour
     {
+        [field:SerializeField, Header("The Game resources SO"), Tooltip("Reference to the game resources SO")]
+        public SO_GameResources GameResources { get; private set; }
+
+        
         // Temporary removed as I may not need it
         
         [SerializeField, Tooltip("horizantal speed")]
@@ -65,6 +70,16 @@ namespace PingPing.Scripts.Platforms
         private void Move()
         {
             transform.Translate(_speed * Time.deltaTime * _movementDirection);
+
+            if (transform.position.y > GameResources.TopBounds.y)
+            {
+                transform.position = new Vector3(transform.position.x, GameResources.TopBounds.y, 0.0f);
+            }
+
+            if (transform.position.y < GameResources.ButtomBounds.y)
+            {
+                transform.position = new Vector3(transform.position.x, GameResources.ButtomBounds.y, 0.0f);
+            }
         }
 
         /// <summary>
@@ -76,10 +91,18 @@ namespace PingPing.Scripts.Platforms
         {
             if (_isDragged)
             {
-                _movementDirection = Vector2.left + (_touchWorldPosition.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
-                _movementDirection = _movementDirection.normalized;
+                if (Mathf.Approximately(_touchWorldPosition.y - transform.position.y, 0))
+                {
+                    Debug.Log("No vertical movement");
+                    _movementDirection = Vector2.left;
+                }
+                else
+                {
+                    _movementDirection = Vector2.left + (_touchWorldPosition.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
+                    _movementDirection = _movementDirection.normalized;
+                }
 
-                _speed = _verticalSpeed /*+ _horizontalSpeed*/;
+                _speed = _verticalSpeed/* + _horizontalSpeed*/;
             }
         }
 

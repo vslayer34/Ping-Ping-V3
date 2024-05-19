@@ -293,7 +293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &782136690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -699,6 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542409971}
   - component: {fileID: 1542409972}
+  - component: {fileID: 1542409973}
   m_Layer: 8
   m_Name: Top Bounds
   m_TagString: Untagged
@@ -764,6 +765,33 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &1542409973
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542409970}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1549596478
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e6b3ec6aaa27b28c212ac91bb3fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <GameResources>k__BackingField: {fileID: 11400000, guid: 017ecaf467c363aed9832384a7d77486, type: 2}
   <TopBounds>k__BackingField: {fileID: 1542409972}
   <ButtomBounds>k__BackingField: {fileID: 2121832290}
   _levelMainCamera: {fileID: 836396874}
@@ -1153,6 +1182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2121832289}
   - component: {fileID: 2121832290}
+  - component: {fileID: 2121832291}
   m_Layer: 8
   m_Name: Buttom Bounds
   m_TagString: Untagged
@@ -1218,6 +1248,33 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &2121832291
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121832288}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &4001720873990003797
 PrefabInstance:
   m_ObjectHideFlags: 0

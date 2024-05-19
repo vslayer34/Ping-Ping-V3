@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using PingPing.Scripts.ScriptableObjectsBase;
 using UnityEngine;
 
 namespace PingPing.Scripts.Level
 {
     public class LevelBoundries : MonoBehaviour
     {
+        [field:SerializeField, Header("The Game resources SO"), Tooltip("Reference to the game resources SO")]
+        public SO_GameResources GameResources { get; private set; }
+
+
         [field: SerializeField, Header("Child Game objects"), Tooltip("Reference to the edge collider of the top bounds")]
         public EdgeCollider2D TopBounds { get; private set; }
 
@@ -37,6 +42,9 @@ namespace PingPing.Scripts.Level
         {
             TopBounds.offset = new Vector2(0.0f, _cameraSize / 2);
             ButtomBounds.offset = new Vector2(0.0f, -1 * _cameraSize / 2);
+
+            GameResources.TopBounds = TopBounds.offset;
+            GameResources.ButtomBounds = ButtomBounds.offset;
         }
     }
 }

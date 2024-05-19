@@ -48,6 +48,12 @@ namespace PingPing.Scripts.ScriptableObjectsBase
         private GameObject _newDoublePlatform;
 
 
+        // Level Bounds----------------------------------------------------------------------------
+
+        public Vector2 TopBounds { get; set; }
+        public Vector2 ButtomBounds { get; set;}
+
+
 
         // Pool Methods----------------------------------------------------------------------------
 

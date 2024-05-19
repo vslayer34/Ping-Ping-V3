@@ -110,7 +110,7 @@ namespace PingPing.Scripts.Platforms
         /// </summary>
         private void HandleDragingMotion(Finger finger)
         {
-            if (!_isDragged)
+            if (!_isDragged || _fingerIndex != finger.index)
             {
                 return;
             }

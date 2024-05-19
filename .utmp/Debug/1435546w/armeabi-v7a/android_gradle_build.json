@@ -1,0 +1,47 @@
+{
+  "buildFiles": [
+    "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt",
+    "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/cpp/FramePacing/CMakeLists.txt",
+    "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/hmaserv/Unity/Hub/Editor/2023.2.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/hmaserv/Unity/Hub/Editor/2023.2.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "game",
+      "output": "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/intermediates/cxx/Debug/1435546w/obj/armeabi-v7a/libgame.so",
+      "runtimeFiles": []
+    },
+    "swappywrapper::@7e25bd1f32ce224db4e9": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "swappywrapper",
+      "output": "/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/build/intermediates/cxx/Debug/1435546w/obj/armeabi-v7a/libswappywrapper.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/hmaserv/Unity/Hub/Editor/2023.2.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/hmaserv/Unity/Hub/Editor/2023.2.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

@@ -79,7 +79,7 @@ namespace PingPing.Scripts.Platforms
                 _movementDirection = Vector2.left + (_touchWorldPosition.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
                 _movementDirection = _movementDirection.normalized;
 
-                _speed = _verticalSpeed + _horizontalSpeed;
+                _speed = _verticalSpeed /*+ _horizontalSpeed*/;
             }
         }
 

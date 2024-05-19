@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _horizontalSpeed: 2
-  _verticalSpeed: 10
+  _verticalSpeed: 8
 --- !u!61 &8486191185964907392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.021491, y: 3.016449}
+  m_Size: {x: 2.761424, y: 3.839038}
   m_EdgeRadius: 0
 --- !u!114 &4864617381152598067
 MonoBehaviour:

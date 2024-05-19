@@ -1,0 +1,8 @@
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/CMakeFiles/edit_cache.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+/mnt/df4c678b-2df4-4fec-9aa4-9f939f62bfd5/Projects/Unity/Ping Ping V3/.utmp/Debug/1435546w/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

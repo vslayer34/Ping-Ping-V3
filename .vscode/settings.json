@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Ping-Ping-V3.sln"
+    "dotnet.defaultSolution": "Ping Ping V3.sln"
 }

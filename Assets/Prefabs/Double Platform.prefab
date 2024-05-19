@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5377439502586926040}
   - component: {fileID: 8486191185964907392}
   - component: {fileID: 4864617381152598067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Double Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ae8ff45fdeb22191305a8e63fee0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horizontalSpeed: 3
-  _verticalSpeed: 2
+  _horizontalSpeed: 2
+  _verticalSpeed: 10
 --- !u!61 &8486191185964907392
 BoxCollider2D:
   m_ObjectHideFlags: 0

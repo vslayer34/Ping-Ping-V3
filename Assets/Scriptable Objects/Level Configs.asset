@@ -13,12 +13,53 @@ MonoBehaviour:
   m_Name: Level Configs
   m_EditorClassIdentifier: 
   <SpawnRate>k__BackingField:
-    minTime: 4
-    maxTime: 6
-  <StartTimer>k__BackingField: 3
+    minTime: 3
+    maxTime: 4
+  <StartTimer>k__BackingField: 5
   <YAxisSpawnInterval>k__BackingField:
     minYPosition: -6
     maxYPosition: 6
   <PlatformsPoolSize>k__BackingField: 20
-  <PlatformPool>k__BackingField: []
+  <PlatformPool>k__BackingField:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   <DoublePlatformPrefab>k__BackingField: {fileID: 5153975986399146157, guid: d537ee33892e9493a919e45364271a86, type: 3}

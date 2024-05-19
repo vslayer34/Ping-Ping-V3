@@ -699,7 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542409971}
   - component: {fileID: 1542409972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1837654955
 Transform:
   m_ObjectHideFlags: 0
@@ -968,29 +968,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5120917858129678615, guid: 2d4f1529f6e5e841883fbc5281110033, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5120917858129678615, guid: 2d4f1529f6e5e841883fbc5281110033, type: 3}
-      propertyPath: _verticalSpeed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8522730393748483341, guid: 2d4f1529f6e5e841883fbc5281110033, type: 3}
       propertyPath: m_Name
       value: Starting Platform
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964975872581274867, guid: 2d4f1529f6e5e841883fbc5281110033, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964975872581274867, guid: 2d4f1529f6e5e841883fbc5281110033, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8964975872581274867, guid: 2d4f1529f6e5e841883fbc5281110033, type: 3}
-      propertyPath: m_LayerOverridePriority
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1173,7 +1153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2121832289}
   - component: {fileID: 2121832290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Buttom Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,9 +1270,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double Platform
       objectReference: {fileID: 0}
-    - target: {fileID: 5153975986399146157, guid: d537ee33892e9493a919e45364271a86, type: 3}
-      propertyPath: m_Layer
-      value: 7
+    - target: {fileID: 8486191185964907392, guid: d537ee33892e9493a919e45364271a86, type: 3}
+      propertyPath: m_Size.x
+      value: 2.761424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486191185964907392, guid: d537ee33892e9493a919e45364271a86, type: 3}
+      propertyPath: m_Size.y
+      value: 3.839038
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

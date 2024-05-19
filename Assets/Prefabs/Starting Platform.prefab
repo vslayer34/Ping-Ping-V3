@@ -207,13 +207,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8522730393748483341}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a00ae8ff45fdeb22191305a8e63fee0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horizontalSpeed: 3
-  _verticalSpeed: 2
+  _horizontalSpeed: 2
+  _verticalSpeed: 5
 --- !u!114 &3551863975405891380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BallHolderArea>k__BackingField: {fileID: 5269984910591753008}
   <Ball>k__BackingField: {fileID: 3343088367173533598}
-  _launchForce: 10
+  _launchForce: 6
 --- !u!1001 &563520047341573323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -276,6 +276,18 @@ PrefabInstance:
     - target: {fileID: 2234491554834901363, guid: b91b51f460ab9ff9f8956f7ae95a7ea3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915993054020409400, guid: b91b51f460ab9ff9f8956f7ae95a7ea3, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915993054020409400, guid: b91b51f460ab9ff9f8956f7ae95a7ea3, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915993054020409400, guid: b91b51f460ab9ff9f8956f7ae95a7ea3, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9055991045203982298, guid: b91b51f460ab9ff9f8956f7ae95a7ea3, type: 3}
       propertyPath: m_Name

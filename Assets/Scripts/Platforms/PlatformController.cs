@@ -99,6 +99,7 @@ namespace PingPing.Scripts.Platforms
                 else
                 {
                     _movementDirection = Vector2.left + (_touchWorldPosition.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
+                    // _movementDirection = (_touchWorldPosition.y - transform.position.y > 0 ? Vector2.up : Vector2.down);
                     _movementDirection = _movementDirection.normalized;
                 }
 

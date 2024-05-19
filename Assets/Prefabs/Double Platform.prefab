@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <GameResources>k__BackingField: {fileID: 11400000, guid: 017ecaf467c363aed9832384a7d77486, type: 2}
   _horizontalSpeed: 2
-  _verticalSpeed: 8
+  _verticalSpeed: 9
 --- !u!61 &8486191185964907392
 BoxCollider2D:
   m_ObjectHideFlags: 0

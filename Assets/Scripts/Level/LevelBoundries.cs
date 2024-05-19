@@ -40,8 +40,11 @@ namespace PingPing.Scripts.Level
         /// </summary>
         private void SetupLevelBounds()
         {
-            TopBounds.offset = new Vector2(0.0f, _cameraSize / 2);
-            ButtomBounds.offset = new Vector2(0.0f, -1 * _cameraSize / 2);
+            // TopBounds.offset = new Vector2(0.0f, _cameraSize / 2);
+            // ButtomBounds.offset = new Vector2(0.0f, -1 * _cameraSize / 2);
+
+            TopBounds.offset = new Vector2(0.0f, _cameraSize);
+            ButtomBounds.offset = new Vector2(0.0f, -1 * _cameraSize);
 
             GameResources.TopBounds = TopBounds.offset;
             GameResources.ButtomBounds = ButtomBounds.offset;
